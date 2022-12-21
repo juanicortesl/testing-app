@@ -2,16 +2,17 @@ import React from 'react';
 import './App.css';
 
 function App() {
-  const [buttonColor, setButtonColor] = React.useState('red');
+  const [buttonColor, setButtonColor] = React.useState('MediumVioletRed');
   const [disabled, setDisabled] = React.useState(false);
   return (
     <div >
       <button
         style={{ backgroundColor: disabled ? 'gray': buttonColor }}
-        onClick={() => setButtonColor(buttonColor === 'red' ? 'blue' : 'red')}
+        onClick={() => setButtonColor(buttonColor === 'MediumVioletRed' ? 'MidnightBlue' : 'MediumVioletRed')}
         disabled={disabled}
       >Change to {
-          buttonColor === 'red' ? 'blue' : 'red'}</button>
+          buttonColor === 'MediumVioletRed' ? 'Midnight Blue' : 'Medium Violet Red'}
+      </button>
       <input type="checkbox" onClick={() => {
         setDisabled(!disabled);
       }} id="disable-button-checkbox" />
